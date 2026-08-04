@@ -132,14 +132,12 @@ def main():
     t.gen_gif()
     print("INFO: output.gif generated")
 
-    readme_file_content = rf"""<div align="justify">
+   readme_file_content = r"""<div align="justify">
 <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./output.gif">
     <source media="(prefers-color-scheme: light)" srcset="./output.gif">
     <img alt="Terminal" src="output.gif">
 </picture>
-
-<sub><i>Generated automatically on {time_now}</i></sub>
 </div>"""
     with open("README.md", "w") as f:
         f.write(readme_file_content)
