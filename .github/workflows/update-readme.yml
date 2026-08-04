@@ -1,0 +1,36 @@
+name: Update readme
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *' # Runs once daily at midnight UTC
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt update && sudo apt install -y ffmpeg
+          python -m pip install --upgrade pip
+          pip install --upgrade github-readme-terminal
+
+      - name: Run script
+        run: python fetch.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIFOS_GENERAL_FPS: 13
+          GIFOS_GENERAL_LOOP_COUNT: 0
+          GIFOS_GENERAL_COLOR_SCHEME: "catppuccin-mocha"
+          GIFOS_GENERAL_USER_NAME: "mohammedhafiz27"
+
+      - name: Commit and push
+        run: |
+          git add README.md output.gif
+          git -c "user.name=github-actions[bot]" -c "user.email=41898282+github-actions[bot]@users.noreply.github.com" commit -m "Automatically updated on $(TZ='Africa/Cairo' date)" || exit 0
+          git push
