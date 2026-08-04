@@ -18,6 +18,7 @@ IGNORE_REPOS = []
 
 def main():
     t = gifos.Terminal(750, 500, 15, 15, FONT_FILE_BITMAP, 15)
+    t.set_fps(13)  # set as int in code — env var GIFOS_GENERAL_FPS loads as a string and breaks math internally
 
     t.gen_text("", 1, count=20)
     t.toggle_show_cursor(False)
