@@ -23,6 +23,7 @@ def main():
     t.gen_text("", 1, count=20)
     t.toggle_show_cursor(False)
     year_now = datetime.now(timezone.utc).strftime("%Y")
+    time_now = datetime.now(ZoneInfo("Africa/Cairo")).strftime("%a %b %d %I:%M:%S %p %Z %Y")
     t.gen_text("GIF_OS Modular BIOS v1.0.11", 1)
     t.gen_text(f"Copyright (C) {year_now}, \x1b[31mHafiz Softwares Inc.\x1b[0m", 2)
     t.gen_text("\x1b[94mGitHub Profile ReadMe Terminal, Rev 1011\x1b[0m", 4)
