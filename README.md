@@ -59,30 +59,25 @@
 
 ---
 
-<h3 align="left">🛠 Languages & Tools</h3>
-
-<div align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" height="40" alt="flutter" />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" height="40" alt="dart" />
-  <img width="12" />
-
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40" alt="git" />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" height="40" alt="androidstudio" />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" height="40" alt="vscode" />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" height="40" alt="figma" />
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=6C63FF&height=100&section=header&text=Languages%20%26%20Tools&fontSize=28&fontAlignY=35&fontColor=ffffff" width="100%" />
 </div>
+
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=flutter,dart,git,androidstudio,vscode,figma&theme=dark&perline=8" />
+</div>
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=14&duration=2000&pause=800&color=6C63FF&center=true&vCenter=true&width=440&lines=Flutter+%2B+Clean+Architecture;BLoC+%2F+Cubit+%2F+GoRouter" />
+</p>
 
 ---
 
 <h3 align="left">📊 GitHub Stats</h3>
 
 <div align="center">
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username=MohammedHafiz27&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" />
-  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MohammedHafiz27&layout=compact&theme=tokyonight&hide_border=true&langs_count=6" />
+  <img height="160" src="./profile/stats.svg" />
+  <img height="160" src="./profile/top-langs.svg" />
 </div>
 
 <div align="center">
