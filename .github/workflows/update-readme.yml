@@ -24,8 +24,6 @@ jobs:
         run: python fetch.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GIFOS_GENERAL_FPS: 13
-          GIFOS_GENERAL_LOOP_COUNT: 0
           GIFOS_GENERAL_COLOR_SCHEME: "catppuccin-mocha"
           GIFOS_GENERAL_USER_NAME: "mohammedhafiz27"
 
