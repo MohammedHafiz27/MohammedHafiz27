@@ -32,9 +32,9 @@
 
 <p align="left">
   I'm a Flutter Developer from Egypt 🇪🇬, passionate about building polished cross-platform apps and full-stack products.<br><br>
-  - 🔭 Currently building <strong>Acad-Mate</strong> (university portal) & <strong>yallaManwha</strong> (manga reader)<br>
+  - 🔭 Currently building <strong>Blase</strong> (university portal) & <strong>yallaManwha</strong> (manga reader)<br>
 
-  - 🏛️ Love <strong>Clean Architecture</strong>, BLoC/Cubit, and GoRouter<br>
+  - 🏛️ Love <strong>MVVM</strong>, BLoC/Cubit, and GoRouter<br>
   - 🌱 Always building, always shipping
 </p>
 
@@ -50,7 +50,7 @@
       <code>Flutter</code> <code>Dart</code> <code>Dio</code> <code>BLoC</code> <code>easy_localization</code> <code>Shorebird OTA</code>
     </td>
     <td>
-      <strong>📚 Acad-Mate</strong><br/>
+      <strong>📚 Blase</strong><br/>
       University portal (mobile) with professor & student views. Clean arch + BLoC.<br/>
       <code>Flutter</code> <code>Dart</code> <code>BLoC</code> <code>GoRouter</code>
     </td>
@@ -59,16 +59,14 @@
 
 ---
 
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=6C63FF&height=100&section=header&text=Languages%20%26%20Tools&fontSize=28&fontAlignY=35&fontColor=ffffff" width="100%" />
-</div>
+<h3 align="left">🛠 Languages & Tools</h3>
 
 <div align="center">
   <img src="https://skillicons.dev/icons?i=flutter,dart,git,androidstudio,vscode,figma&theme=dark&perline=8" />
 </div>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=14&duration=2000&pause=800&color=6C63FF&center=true&vCenter=true&width=440&lines=Flutter+%2B+Clean+Architecture;BLoC+%2F+Cubit+%2F+GoRouter" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=14&duration=2000&pause=800&color=6C63FF&center=true&vCenter=true&width=440&lines=Flutter+%2B+MVVM;BLoC+%2F+Cubit+%2F+GoRouter" />
 </p>
 
 ---
