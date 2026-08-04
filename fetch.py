@@ -70,7 +70,6 @@ def main():
     t.toggle_show_cursor(True)
     t.gen_typing_text("*********", 4, contin=True)
     t.toggle_show_cursor(False)
-    time_now = datetime.now(ZoneInfo("Africa/Cairo")).strftime("%a %b %d %I:%M:%S %p %Z %Y")
     t.gen_text(f"Last login: {time_now} on tty1", 6)
 
     t.gen_prompt(7, count=5)
@@ -132,14 +131,15 @@ def main():
     t.gen_gif()
     print("INFO: output.gif generated")
 
-   readme_file_content = r"""<div align="justify">
+    readme_file_content = r"""<div align="justify">
 <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./output.gif">
     <source media="(prefers-color-scheme: light)" srcset="./output.gif">
     <img alt="Terminal" src="output.gif">
 </picture>
 </div>"""
-    with open("README.md", "w") as f:
+
+    with open("README.md", "w", encoding="utf-8") as f:
         f.write(readme_file_content)
         print("INFO: README.md file generated")
 
