@@ -4,6 +4,4 @@
     <source media="(prefers-color-scheme: light)" srcset="./output.gif">
     <img alt="Terminal" src="output.gif">
 </picture>
-
-<sub><i>Generated automatically on Wed Aug 05 02:22:36 AM EEST 2026</i></sub>
 </div>
