@@ -30,9 +30,9 @@ const JET_X_START = 35;
 const JET_X_END = 478;
 const LOOP_DUR = 20; // seconds, one full there-and-back pass
 const MAX_TARGETS = 12; // how many "busiest" days the jet fires on
-const FLASH_COLOR = "#39d353";
-const BULLET_COLOR = "#7ee787";
-const BLAST_COLOR = "#56d364";
+const FLASH_COLOR = "#94E2D5";   // Teal
+const BULLET_COLOR = "#F5C2E7";  // Pink
+const BLAST_COLOR = "#FAB387";   // Peach
 const PAD_Y = 128; // where bullets launch from (just under the grid)
 
 if (!USERNAME) {
@@ -193,18 +193,18 @@ function buildStars() {
     [30, 164, 1.2], [483, 164, 1.6],
   ];
   return pts.map(([x, y, dur]) =>
-    `<circle cx="${x}" cy="${y}" r="1.1" fill="#8b949e"><animate attributeName="opacity" values="0.2;1;0.2" dur="${dur}s" repeatCount="indefinite"/></circle>`
+    `<circle cx="${x}" cy="${y}" r="1.1" fill="#BAC2DE"><animate attributeName="opacity" values="0.2;1;0.2" dur="${dur}s" repeatCount="indefinite"/></circle>`
   ).join("\n");
 }
 
 function buildJet() {
   return `<g id="jet">
   <g transform="translate(0,0)">
-    <polygon points="0,-16 8,6 4,3 -4,3 -8,6" fill="#58a6ff" stroke="#1f6feb" stroke-width="1"/>
-    <polygon points="-8,6 -14,12 -4,7" fill="#388bfd"/>
-    <polygon points="8,6 14,12 4,7" fill="#388bfd"/>
-    <circle cx="0" cy="-6" r="2.2" fill="#c9e6ff"/>
-    <polygon points="-3,7 3,7 0,15" fill="#f0883e">
+    <polygon points="0,-16 8,6 4,3 -4,3 -8,6" fill="#F5C2E7" stroke="#CBA6F7" stroke-width="1"/>
+    <polygon points="-8,6 -14,12 -4,7" fill="#CBA6F7"/>
+    <polygon points="8,6 14,12 4,7" fill="#CBA6F7"/>
+    <circle cx="0" cy="-6" r="2.2" fill="#F9E2AF"/>
+    <polygon points="-3,7 3,7 0,15" fill="#FAB387">
       <animate attributeName="opacity" values="0.5;1;0.6;1" dur="0.18s" repeatCount="indefinite"/>
     </polygon>
   </g>
@@ -221,7 +221,7 @@ function buildSvg(weeks) {
   const { bullets, blasts } = buildBulletsAndBlasts(targets);
 
   return `<svg viewBox="0 0 ${WIDTH} ${HEIGHT}" xmlns="http://www.w3.org/2000/svg">
-<rect x="0" y="0" width="${WIDTH}" height="${HEIGHT}" fill="#0d1117"/>
+<rect x="0" y="0" width="${WIDTH}" height="${HEIGHT}" fill="#1E1E2E"/>
 ${buildStars()}
 <g id="grid">
 ${buildGrid(cells, targets)}</g>
