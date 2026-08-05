@@ -5,3 +5,6 @@
     <img alt="Terminal" src="output.gif">
 </picture>
 </div>
+<p align="center">
+  <img src="./dist/github-jet.svg" width="100%">
+</p>
