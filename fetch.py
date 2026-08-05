@@ -138,7 +138,11 @@ def main():
     <source media="(prefers-color-scheme: light)" srcset="./output.gif">
     <img alt="Terminal" src="output.gif">
 </picture>
-</div>"""
+</div>
+<p align="center">
+  <img src="./dist/github-jet.svg" width="100%">
+</p>
+"""
 
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(readme_file_content)
