@@ -1,34 +1,73 @@
-name: Update readme
+name: Update GitHub Profile
 
 on:
   workflow_dispatch:
+
   schedule:
-    - cron: '0 0 * * *' # Runs once daily at midnight UTC
+    - cron: "0 0 * * *"
+
+  push:
+    paths:
+      - "README.md"
+      - "fetch.py"
+      - "cat.png"
+      - "fonts/**"
+      - ".github/workflows/update-profile.yml"
 
 permissions:
   contents: write
 
-jobs:
-  update-readme:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+concurrency:
+  group: update-github-profile
+  cancel-in-progress: true
 
-      - name: Install dependencies
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Generate Space Shooter
+      - name: Generate Space Shooter
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          sudo apt update && sudo apt install -y ffmpeg
+          python -m pip install --disable-pip-version-check "gh-space-shooter==2.0.4"
+
+          gh-space-shooter MohammedHafiz27 \
+            --output space-shooter.gif \
+            --strategy random \
+            --fps 30
+
+      # Generate Terminal GIF
+      - name: Install README dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y ffmpeg
           python -m pip install --upgrade pip
           pip install --upgrade github-readme-terminal
 
-      - name: Run script
-        run: python fetch.py
+      - name: Generate Terminal GIF and README
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GIFOS_GENERAL_COLOR_SCHEME: "catppuccin-mocha"
           GIFOS_GENERAL_USER_NAME: "mohammedhafiz27"
-
-      - name: Commit and push
         run: |
-          git add README.md output.gif
-          git -c "user.name=github-actions[bot]" -c "user.email=41898282+github-actions[bot]@users.noreply.github.com" commit -m "Automatically updated on $(TZ='Africa/Cairo' date)" || exit 0
-          git push
+          python fetch.py
+
+      # Commit everything to main
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add README.md output.gif space-shooter.gif
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: update GitHub profile"
+            git push
+          fi
