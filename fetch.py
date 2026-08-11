@@ -132,15 +132,16 @@ def main():
     t.gen_gif()
     print("INFO: output.gif generated")
 
-    readme_file_content = r"""<div align="justify">
+readme_file_content = r"""<div align="justify">
 <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./output.gif">
     <source media="(prefers-color-scheme: light)" srcset="./output.gif">
     <img alt="Terminal" src="output.gif">
 </picture>
 </div>
+
 <p align="center">
-  <img src="./dist/github-jet.svg" width="100%">
+  <img src="./space-shooter.gif" width="100%">
 </p>
 """
 
