@@ -129,10 +129,10 @@ def main():
     )
     t.gen_text("", t.curr_row, count=120, contin=True)
 
-    t.gen_gif()
+       t.gen_gif()
     print("INFO: output.gif generated")
 
-readme_file_content = r"""<div align="justify">
+    readme_file_content = r"""<div align="justify">
 <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./output.gif">
     <source media="(prefers-color-scheme: light)" srcset="./output.gif">
@@ -141,7 +141,7 @@ readme_file_content = r"""<div align="justify">
 </div>
 
 <p align="center">
-  <img src="./space-shooter.gif" width="100%">
+  <img src="https://raw.githubusercontent.com/MohammedHafiz27/MohammedHafiz27/output/space-shooter.gif" width="100%">
 </p>
 """
 
