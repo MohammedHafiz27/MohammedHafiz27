@@ -13,7 +13,3 @@
     alt="Space Shooter"
   />
 </p>
-
-<p align="center">
-  <img src="./space-shooter.gif" width="100%">
-</p>
