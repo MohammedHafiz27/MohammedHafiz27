@@ -24,7 +24,7 @@ IGNORE_REPOS = []
 
 def main():
     t = gifos.Terminal(
-        750,
+        1000,
         500,
         15,
         15,
